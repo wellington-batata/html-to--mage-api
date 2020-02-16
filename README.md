@@ -1,2 +1,2 @@
-# html-to--mage-api
+# html-to-mage-api
 Converte template hbs para imagem
