@@ -36,7 +36,7 @@ class Screenshot {
     milis = milis.getTime();
   
     await page.screenshot({
-      path:`${path.join(__dirname, 'tmp')}/${milis}.jpg`,
+      path:`${path.join(__dirname, 'tmp')}/${milis}.png`,
       clip: {x: 0, y: 0, width: rect.width, height: rect.height},
       // Não funciona para PNG VERIFICAR
       //quality: 100, 
