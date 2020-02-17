@@ -4,9 +4,38 @@
 <head>
     <meta charset="utf-8">
     <title>Card Smiles</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .print {
+        background-color: teal;
+        float: left;
+      }
+      .square-name{
+        width: 250px;
+        height: 50px;
+        background-color: cadetblue;
+        display: block;
+      }
+
+      .square-last-name{
+        width: 250px;
+        height: 100px;
+        background-color: tomato;
+        display: block;
+      }
+    </style>
 </head>
 
 <body>
-  {{name}} {{lastName}} 
+  <div id="section-to-print" class="print">
+    <div class="square-name">
+      {{name}}
+    </div>
+    <div class="square-last-name">
+      {{lastName}}   
+    </div>
+  </div>
 </body>
 </html>
