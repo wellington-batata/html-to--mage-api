@@ -1,6 +1,6 @@
 import express from 'express';
 import routes from './routes';
-
+import "babel-dotenv";
 class App {
   constructor() {
     this.startup();

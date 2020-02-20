@@ -2,8 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import puppeteer from 'puppeteer';
 import handlebars from 'handlebars';
-import AWS from 'aws-sdk';
-import 'dotenv/config';
+import "babel-dotenv";
 
 class Screenshot {
   async renderTamplate(data){
@@ -17,11 +16,6 @@ class Screenshot {
     const browser = await puppeteer.launch({  
       //args: ['--no-sandbox'],
       headless: true
-    });
-
-    const s3 = new AWS.S3({
-      accessKeyId: process.env.AWS_ACCESS_KEY,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
     });
 
     const page = await browser.newPage();
@@ -49,9 +43,8 @@ class Screenshot {
       //quality: 100, 
     });
 
-    console.log(pic);
     await browser.close();
-    return true;
+    return pic;
   }
 };
 
